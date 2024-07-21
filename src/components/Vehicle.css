@@ -1,0 +1,47 @@
+.car {
+  position: absolute;
+  font-size: 10px;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.3s linear, left 0.3s linear;
+}
+
+.car.move {
+  animation: pulse 0.6s infinite;
+}
+
+.car.turnRight {
+  animation: turnRight 0.3s linear;
+}
+
+.car.turnLeft {
+  animation: turnLeft 0.3s linear;
+}
+
+.car.turn180 {
+  animation: turn180 0.3s linear;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes turnRight {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(90deg); }
+}
+
+@keyframes turnLeft {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-90deg); }
+}
+
+@keyframes turn180 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(180deg); }
+}
